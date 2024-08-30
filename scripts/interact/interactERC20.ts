@@ -7,6 +7,7 @@ async function main() {
   const erc20Address = "ADRESSE_DU_CONTRAT_ERC20"; // Remplacer par l'adresse réelle du contrat ERC20
   const ERC20 = await ethers.getContractFactory("MyERC20Token"); // Remplacer par le nom de votre contrat ERC20
   const erc20 = ERC20.attach(erc20Address);
+  
 
   // Transférer des tokens
   
