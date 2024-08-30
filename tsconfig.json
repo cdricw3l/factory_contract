@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2020",  // Supporte les fonctionnalités modernes d'ES2020
+    "module": "commonjs", // Compatible avec Node.js et les modules CommonJS
+    "esModuleInterop": true, // Facilite l'interopérabilité avec les modules CommonJS, par exemple, avec les imports de style ES6
+    "forceConsistentCasingInFileNames": true, // Évite les erreurs de casse de fichier
+    "strict": true, // Active les vérifications strictes de type
+    "skipLibCheck": true, // Saute la vérification des types des fichiers de déclaration des bibliothèques pour des raisons de performance
+    "resolveJsonModule": true, // Permet l'importation de fichiers JSON en tant que modules
+    "outDir": "./dist", // Spécifie le répertoire de sortie des fichiers compilés
+    "rootDir": "./", // Spécifie le répertoire racine pour les fichiers d'entrée
+    "baseUrl": ".", // Base URL pour la résolution des modules
+    "paths": {
+      "*": ["node_modules/*"]
+    }, // Résolution des chemins de module
+    "typeRoots": ["./node_modules/@types", "./types"] // Répertoires où chercher les types
+  },
+  "include": [
+    "scripts", // Inclut les scripts pour le déploiement et l'interaction
+    "test",    // Inclut les tests
+    "typechain-types", // Types générés par TypeChain
+    "hardhat.config.ts" // Le fichier de configuration Hardhat
+  ],
+  "files": [
+    "./hardhat.config.ts" // Assure que ce fichier est traité
+  ]
+}
